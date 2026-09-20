@@ -8,6 +8,10 @@ Verify the registry with:
 python3 key_registry.py verify --registry public-project-keys.json
 ```
 
+Release hash-manifest signing keys are documented separately in
+[RELEASE_SIGNING_KEYS.md](RELEASE_SIGNING_KEYS.md). Those keys do not replace
+the root signature on `public-project-keys.json`.
+
 ## Registered projects
 
 - `project-001` — `safestack-audit_system` — `kibernetinio-saugumo-sprendimai/safestack-audit_system` — `active` — fingerprint `b3b96eddf09a6315e369a1116860a60bb630d0a2fb1e8e3f855279dab90657d6`
