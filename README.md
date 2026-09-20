@@ -29,4 +29,10 @@ python3 key_registry.py verify --registry public-project-keys.json
 - `project-017` — `telegram-ai-bot` — `kibernetinio-saugumo-sprendimai/telegram-ai-bot` — `active`
 - `project-018` — `Verification-artifacts` — `kibernetinio-saugumo-sprendimai/Verification-artifacts` — `active`
 
-The registry is not trusted until its root signature verifies.
+Registras pasirašytas offline saugomu root privačiu Ed25519 raktu. Privatus raktas neskelbiamas ir į šią saugyklą nekeliamas.
+
+Registras laikomas patikimu tik tada, kai patikrinamas jo root parašas:
+
+```bash
+python3 key_registry.py verify --registry public-project-keys.json
+```
