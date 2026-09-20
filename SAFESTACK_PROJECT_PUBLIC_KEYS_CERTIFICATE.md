@@ -1,23 +1,23 @@
-# SafeStack project public keys — saugyklos sertifikatas
+# SafeStack project public keys — repository certificate
 
-> Tai yra pasirašyto viešų raktų registro atestacija. Tai nėra TLS/X.509 sertifikatas.
+> This is an attestation for the signed public-key registry. It is not a TLS/X.509 certificate.
 
-- **Saugykla:** `kibernetinio-saugumo-sprendimai/safestack-project-public-keys`
-- **Registro schema:** `safestack.project-key-registry.v1`
-- **Registro ID:** `3ce517eafe34ae00d0554e5a52a6c2ca`
-- **Atnaujinta:** `2026-09-20T09:39:57Z`
-- **Projektų skaičius:** `19`
-- **Root viešasis raktas:** `z8oMmyDuGRm4eqNiML6Av2B16GCNMcDOrpZJwaJGsgY=`
-- **Registro SHA-256:** `e93f04dc96ce5d828b04305c3c6f2342c25c8b3b0bc8659b31aab4686bc7ab78`
-- **Registro parašas:** patikrintas sėkmingai su root viešuoju raktu
+- **Repository:** `kibernetinio-saugumo-sprendimai/safestack-project-public-keys`
+- **Registry schema:** `safestack.project-key-registry.v1`
+- **Registry ID:** `3ce517eafe34ae00d0554e5a52a6c2ca`
+- **Updated:** `2026-09-20T09:39:57Z`
+- **Project count:** `19`
+- **Root public key:** `z8oMmyDuGRm4eqNiML6Av2B16GCNMcDOrpZJwaJGsgY=`
+- **Registry SHA-256:** `e93f04dc96ce5d828b04305c3c6f2342c25c8b3b0bc8659b31aab4686bc7ab78`
+- **Registry signature:** successfully verified with the root public key
 
-## Patikra
+## Verification
 
 ```bash
 python3 key_registry.py verify --registry public-project-keys.json
 ```
 
-Privatūs root ir projektų raktai į šią saugyklą neįtraukiami.
+Private root and project keys are not included in this repository.
 
 ## Registruoti projektai
 
