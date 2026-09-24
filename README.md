@@ -1,18 +1,44 @@
-# SafeStack project public keys
+# SafeStack Project Public Keys
 
-This repository contains only public project keys and the root-signed registry. Private keys are stored offline and are never committed here.
+This repository maintains the root-signed Ed25519 public key registry for all repositories, projects, and release signers across the SafeStack ecosystem.
 
-Verify the registry with:
+Private keys are stored offline and are never committed here.
+
+---
+
+## Canonical Authority & Governance
+
+- **Root Canon:** [`safestack-canon`](https://github.com/kibernetinio-saugumo-sprendimai/safestack-canon) v1.0.0
+- **Technical Canon:** [`safestack-technical-canon`](https://github.com/kibernetinio-saugumo-sprendimai/safestack-technical-canon) v1.0.0
+- **Registry ID:** `3ce517eafe34ae00d0554e5a52a6c2ca`
+- **Registry Schema:** `safestack.project-key-registry.v1`
+- **Root Public Key:** `z8oMmyDuGRm4eqNiML6Av2B16GCNMcDOrpZJwaJGsgY=`
+- **Validation Status:** Enforced across all SafeStack nodes
+
+---
+
+## Verification
+
+The repository includes a self-contained, standalone verifier:
 
 ```bash
+# Verify the root Ed25519 signature on the registry:
 python3 key_registry.py verify --registry public-project-keys.json
+
+# List all registered projects and fingerprints:
+python3 key_registry.py list --registry public-project-keys.json
+
+# Run automated integrity test:
+python3 -m unittest test_registry.py
 ```
 
 Release hash-manifest signing keys are documented separately in
 [RELEASE_SIGNING_KEYS.md](RELEASE_SIGNING_KEYS.md). Those keys do not replace
 the root signature on `public-project-keys.json`.
 
-## Registered projects
+---
+
+## Registered Projects
 
 - `project-001` — `safestack-audit_system` — `kibernetinio-saugumo-sprendimai/safestack-audit_system` — `active` — fingerprint `b3b96eddf09a6315e369a1116860a60bb630d0a2fb1e8e3f855279dab90657d6`
 - `project-002` — `.github` — `kibernetinio-saugumo-sprendimai/.github` — `active` — fingerprint `7356cddcfd1b95bcc8f6c047bac5a39540ab935e7ae729a93f5f07a688d9e9c9`
